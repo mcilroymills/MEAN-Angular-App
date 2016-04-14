@@ -1,14 +1,19 @@
 language: node_js
-
 node_js:
-  - "4.1"
-  - "4.0"
-  - '0.12'
-  - '0.11'
-
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.11'
 services: mongodb
-
 before_script:
-  - npm install -g mocha
-
+- npm install -g mocha
 script: mocha
+deploy:
+  provider: heroku
+  api_key:
+    secure: HT3PEf6ymPjICQ8nHyR9HbwcS6ZIeTaZSmzDARBK0s2bPSDUftVd5ZCUPTW7toA93DTjHVbjqPnglQ8yDLe4+2a+utogRw9O72K0nIXuvj9G3rNaH8CmtGpM3J015r5/vaVRSBPfQRKJfWGdXT02Gx6tabCJdg4mKIQWRku+GeLFUN579dQNaSWB7UfnyQitfjo8X5ysUn7r53Neo5HuFLVaeFYDXI7S3oJiF4cZkoGSJZOi2toBvIka99ZZlYLmsC/yiJBULw5PIiMk74J0O5Thfkcxx8ZRtR58ClsR2HpZMzAaooOeGXAI2DgvG2BNYQ0KAEztHVMulQV7ywte2pWmWVGOlXdWVFyzWcagJg3XI0tpMoFWFAf0OuE2Yh5oGkFRS54uR22w0CeR8MH6f+2X9TXMzC3L/z4BvoovdG5lnUYZmu9++xQzWw7RrrbLbXkxulcQy15aPC4wlVo04C5DDOH8ImoLV4dJ/6NsU5GUdm4SKeJ8DKl0nJwsm8UXbbfemrufawYAp14WLQcqAsxn8aS7O4aQ4dx1YczNyW7M5ahTq+7ucVGQoTF7IHekwea+ntb0ClEohqvHvtL61JRRjzE2wdrATBs94ehGf4KiAM1sDbWaCnCPslkQShi6pXDAGPrsapXIrz4CmiGok71/JqMhS6iUVMNZAT+neqI=
+  app: mean-mcilroy
+  on:
+    branch: master
+    node: '5'
+    repo: millsmcilroy/MEAN-Angular-App
