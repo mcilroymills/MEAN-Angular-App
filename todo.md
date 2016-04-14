@@ -1,5 +1,7 @@
 # To do
 
+[![Build Status](https://travis-ci.org/millsmcilroy/MEAN-Angular-App.svg?branch=master)](https://travis-ci.org/millsmcilroy/MEAN-Angular-App)
+
 1. Refactor out `$window.location.reload();`
 1. Refactor jQuery modal
 1. Add promises to Mongoose
@@ -11,4 +13,3 @@
 1. Add flash messages
 1. Refactor out all global controllers, adding in Directives
 
-##change
